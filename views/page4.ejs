@@ -1,0 +1,55 @@
+        <div class="banner">
+            <div class="banner_img">
+                 <div class="banner_txt">夜하게 놀자, 대한민국 대표 야시장
+                <br>서문시장야시장</div>
+            </div>
+        </div>
+        <% if (typeof errs !== 'undefined') { %>
+            <% errs.forEach (() => {%>
+                <h3><%= err.param %> : <%= err.msg %></h3>
+            <%}) %>
+        <%}%>
+        <form method="get" action="/page4">
+            <input type="hidden" name="id" value="<%=row.id%>">
+            <div class="main_wrap w1200">
+            <div class="inb_wrap"> 
+                <div class="inb_nav">홈 > 야시장 소개 > 야시장 안내</div>
+            </div>
+            <section>
+                <article>
+                    <div class="title">
+                        <div class="wave"></div>
+                        <h2>공지사항</h2>
+                        <p>글로벌하게 먹고, 마시고, 즐길 수 있는 대한민국 No.1 야시장</p>
+                    </div>
+                </article>
+                <article class="write_wrap">
+                    <div class="main_top">
+                        <div><%=row.title%></div>
+                        <ul>
+                            <li>작성자 <p><%=row.writer%></p></li>
+                            <li><%=row.created%></li>
+                            <li>조회2,035회</li>
+                        </ul>
+                    </div>
+                    <div class="button_wrap">
+                        <div class="button_left">
+                            <span><a href="">이전글</a></span>
+                            <span><a href="">다음글</a></span>
+                        </div>
+                        <div class="button_right">
+                            <a href="">목록</a>
+                        </div>
+                    </div>
+                    <div class="main_mid">
+                        <div class="not_txt">
+                           <%=row.content%>
+                        </div>
+                    </div>
+                    <div class="main_bot"></div>
+                    <input type="button" onclick="javascript:location.href='/updateMemo?id=<%=row.id%>'" value="Edit">
+                    <input type="button" onclick="javascript:location.href='/deleteMemo?id=<%=row.id%>'" value="Del">
+                </form>
+                </article>
+            </section>
+        </div>    

@@ -1,0 +1,30 @@
+{
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "ejs": "^3.1.7",
+    "express": "^4.18.0",
+    "express-ejs-layouts": "^2.5.1",
+    "express-validator": "^6.14.1",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
+    "path": "^0.12.7",
+    "static": "^2.0.0"
+  },
+  "name": "project1",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oheunbee/node.git"
+  },
+  "author": "eunbee",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/oheunbee/node/issues"
+  },
+  "homepage": "https://github.com/oheunbee/node#readme",
+  "description": "프로젝트 작성중....."
+}

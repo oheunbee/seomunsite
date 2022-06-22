@@ -1,0 +1,154 @@
+        <div class="banner">
+            <div class="banner_img">
+                 <div class="banner_txt">夜하게 놀자, 대한민국 대표 야시장
+                <br>서문시장야시장</div>
+            </div>
+        </div>
+        <div class="main_wrap w1200">
+            <div class="top">
+                <div class="inb_nav">홈 > 입점신청 > 공지사항</div>
+            </div>
+            <section>
+                <article>
+                    <div class="title">
+                        <div class="wave"></div>
+                        <h2>공지사항</h2>
+                        <p>夜하게 놀자, 대한민국 대표 야시장</p>
+                    </div>
+                </article>
+                <article class="table_wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col">번호</th>
+                                <th scope="col">제목</th>
+                                <th scope="col">글쓴이</th>
+                                <th scope="col">날짜</th>
+                                <th scope="col">조회</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="notice">
+                                <td>공지</td>
+                                <td>
+                                    <a href="/page4">●◎서문야시장 22년 3월 영업 공지◎●</a>                                
+                                </td>
+                                <td>마스터</td>
+                                <td>03-28</td>
+                                <td>1933</td>
+                            </tr>
+                            <tr class="notice">
+                                <td>공지</td>
+                                <td>
+                                    <a href="./page4.html">서문 칠성야시장 매대운영자 모집공고</a>                                    
+                                </td>
+                                <td>마스터</td>
+                                <td>03-24</td>
+                                <td>1674</td>
+                            </tr>
+                            <tr class="notice">
+                                <td>공지</td>
+                                <td>
+                                    <a href="">설 명절 특별 이벤트 진행</a>                                    
+                                </td>
+                                <td>마스터</td>
+                                <td>01-28</td>
+                                <td>1001</td>
+                            </tr>
+                            <tr class="notice">
+                                <td>공지</td>
+                                <td>
+                                    <a href="">서문야시장 22년 설 연휴 기간 영업 공지</a>                                    
+                                </td>
+                                <td>마스터</td>
+                                <td>01-24</td>
+                                <td>1708</td>
+                            </tr>
+                            <tr class="notice">
+                                <td>공지</td>
+                                <td>
+                                    <a href="">서문야시장 동계영업 시간 공지</a>                                    
+                                </td>
+                                <td>마스터</td>
+                                <td>01-03</td>
+                                <td>1113</td>
+                            </tr>
+                            <tr class="notice">
+                                <td>공지</td>
+                                <td>
+                                    <a href="">제 4회 2021 서문가요제 결승전 개최</a>                                    
+                                </td>
+                                <td>마스터</td>
+                                <td>12-17</td>
+                                <td>1966</td>
+                            </tr>
+                            <tr class="notice">
+                                <td>공지</td>
+                                <td>
+                                    <a href="">서문야시장 정기휴무일 변경 안내</a>                                    
+                                </td>
+                                <td>마스터</td>
+                                <td>08-13</td>
+                                <td>868</td>
+                            </tr>
+    <!--공지 끝-->
+                            <% rows.forEach((row, index) => {       %>
+                            <tr>
+                                <input type="hidden" name="id" value="<%=row.id%>">
+                                <td><%= row.id%></td>
+                                <td><a onclick="javascript:location.href='/page4?id=<%=row.id%>'" ><%= row.title%></a></td>
+                                <td><%=row.writer%></td>
+                                <td><%= row.updated%></td>
+                                <td></td>
+                            </tr>
+                            <% })  %>
+                        </tbody>
+                    </table>
+                </article>
+                <div class="page_wrap">
+                    <ul>
+                        <li>
+                            <a href="#"><<</a>
+                        </li>
+                        <li>
+                            <a href="#"><</a>
+                        </li>
+                        <li class="pg_num">
+                            <a href="#">1</a>
+                        </li>
+                        <li class="pg_num">
+                            <a href="#">2</a>
+                        </li>
+                        <li class="pg_num">
+                            <a href="#">3</a>
+                        </li>
+                        <li class="pg_num">
+                            <a href="#">4</a>
+                        </li>
+                        <li class="pg_num">
+                            <a href="#">5</a>
+                        </li>
+                        <li class="pg_num">
+                            <a href="#">6</a>
+                        </li>
+                        <li>
+                            <a href="#">></a>
+                        </li>
+                        <li>
+                            <a href="#">>></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="search_wrap">
+                    <select name="title" class="list">
+                        <option value="">번호</option>
+                        <option value="">제목</option>
+                        <option value="">날짜</option>
+                        <option value="">조회</option>
+                    </select>
+                    <input class="search" type="text">
+                    <button>검색</button>
+                    &nbsp;<button onclick="javascript:location.href='/newMemo'"> 글쓰기</button>
+                </div>
+            </section>
+        </div>

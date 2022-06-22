@@ -1,0 +1,29 @@
+        <section class=" main_wrap w1200">
+            <div class="noti_sec">
+                <h2>공지사항 작성하기</h2>
+                <% if(typeof errs !== "undefined") { %>
+                    <% errs.forEach((err)=>{%>
+                        <h3><%=err.param%> : <%=err.msg%></h3>
+                    <% }) %>
+                <% } %>
+                <form method="POST" action="/store">
+                    <table class="no_table">
+                        <tr>
+                            <td><label>제목 : </label></td>
+                            <td><input name="title"></td>
+                        </tr>
+                        <tr>
+                            <td><label>이름 : </label></td>
+                            <td><input name="writer"></td>
+                        </tr>
+                        <tr>
+                            <td>내용 작성 : </td>
+                            <td><textarea name="content" style="width: 600px; height:100px;"></textarea></td>
+                        </tr>
+                        
+                    </table>
+                    <input type="submit" value="submit">
+                <input type="button" value="back" onclick="javascript:location.href='../page3'">
+                </form>
+            </div>    
+        </section>
