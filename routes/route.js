@@ -42,7 +42,10 @@ router.use(expressLayouts);
     res.render("join");
   });
   
-
+  //updated 때문에 추가
+  router.get('/layout', (req,res) => {
+    res.render("layout");
+  });
 
 
 router.post('/store',
@@ -98,7 +101,6 @@ router.post('/updateMemo',
             res.redirect('page3');
         });
     });
-
 
 
   module.exports = router;

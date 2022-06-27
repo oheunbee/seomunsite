@@ -95,7 +95,7 @@
                             <% rows.forEach((row, index) => {       %>
                             <tr>
                                 <input type="hidden" name="id" value="<%=row.id%>">
-                                <td><%= row.id%></td>
+                                <td><%= rows.length - index %></td>
                                 <td><a onclick="javascript:location.href='/page4?id=<%=row.id%>'" ><%= row.title%></a></td>
                                 <td><%=row.writer%></td>
                                 <td><%= row.updated%></td>
