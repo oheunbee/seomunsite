@@ -2,6 +2,16 @@ var express = require('express');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var path = require('path');
+const https = require('https');
+
+/* 1초 = 1000밀리초 
+1분 = 60초
+1분 = 60000밀리초
+10분 = 600000밀리초 */
+
+setInterval(function () {
+    https.get('https://seomunte.herokuapp.com/')
+},600000);
 
 var routers = require('./routes/route');
 
