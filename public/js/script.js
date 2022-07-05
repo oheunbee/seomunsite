@@ -29,7 +29,10 @@ function KakaoLogout() {
                 document.getElementById('login').style.display = 'block';
                 document.getElementById('logout').style.display = 'none';
                 alert('로그아웃 되었습니다.')
-            }        
+            },
+            fail: function (error) {
+                console.log(error);
+            }
         })
         Kakao.Auth.setAccessToken(undefined)
       }
