@@ -1,6 +1,5 @@
 Kakao.init('addc27a1d3c735ad9ea960785ec3d5f7');
 Kakao.isInitialized();
-document.getElementById('logout').style.display = 'none';
 
 
 function KakaoLogin() {
@@ -12,6 +11,7 @@ function KakaoLogin() {
                 console.log(response);
                 document.getElementById('user').innerText = response.Kakao_account.profile.nickname;
                 document.getElementById('login').style.display = 'none';
+                document.getElementById('logout').style.display = 'none';
                 alert( response.Kakao_account.profile.nickname + '님 로그인 되었습니다.')
             }        
         })
