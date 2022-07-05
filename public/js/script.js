@@ -1,5 +1,7 @@
 Kakao.init('addc27a1d3c735ad9ea960785ec3d5f7');
 Kakao.isInitialized();
+document.getElementById('logout').style.display = 'none';
+
 
 function KakaoLogin() {
    Kakao.Auth.login ({
@@ -18,5 +20,19 @@ function KakaoLogin() {
 };
 
 function KakaoLogout() {
-
+    if (!Kakao.Auth.getAccessToken()) {
+        Kakao.API.request ({
+            url : '/v1/user/unlink',
+            success : function (response){
+                console.log(response);
+                document.getElementById('user').style.display = 'none';
+                document.getElementById('login').style.display = 'block';
+                document.getElementById('logout').style.display = 'none';
+                alert('로그아웃 되었습니다.')
+            }        
+        })
+      }
+      Kakao.Auth.logout(function() {
+        alert('logout ok\naccess token -> ' + Kakao.Auth.getAccessToken())
+      })
 }
