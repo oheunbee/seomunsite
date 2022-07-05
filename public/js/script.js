@@ -32,7 +32,5 @@ function KakaoLogout() {
             }        
         })
       }
-      Kakao.Auth.logout(function() {
-        alert('logout ok\naccess token -> ' + Kakao.Auth.getAccessToken())
-      })
+  
 }
