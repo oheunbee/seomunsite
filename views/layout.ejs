@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>seomun</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/notice_write.css">
     <link rel="stylesheet" href="./css/page_common.css">
@@ -21,11 +21,11 @@
     <header>
         <div class="head_top">
             <ul class="w1200">
-                <li id="login" onclick="javascript:KakaoLogin();"><a>LOGIN</a></li>
+                <li id="login"><a href="/login">LOGIN</a></li>
+                <li id="nim" style="display: none;"><span id="user"></span>님</li>
+                <li id="logout" onclick="javascript:KakaoLogout();" style="display: none;">LOGOUT</li>
                 <li>|</li>
                 <li><a href="/join">JOIN</a></li>
-                <li><span id="user"></span>님</li>
-                <li id="logout" onclick="javascript:KakaoLogout();">LOGOUT</li>
             </ul>
         </div>
         <div class="nav_wrap w1200">

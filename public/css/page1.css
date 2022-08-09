@@ -1,27 +1,16 @@
 
 /***main start***/
-.sec1{
-    padding: 0;
+.big_img {
+    width: 100%;
+    height: 100vh;
 }
 .main_img {
     width: 100%;
-    height: auto;
-    padding-bottom: 50%;
-    background-image: url(../img/page1/main1.png);
-    background-position: center center;
-    background-size: 100% auto;
-    background-repeat: no-repeat;
+    height: calc(100vh - 100px);
+    background: url(../img/page1/main1.png) no-repeat center center;
+    background-size: cover;
     position: relative;
     box-sizing: border-box;
-}
-.main_img>div { 
-    position: absolute;
-    bottom: 50%;
-    transform: translate(0, 50%);
-    opacity: 0.7;
-}
-.main_img>.right {
-    right: 0;
 }
 .title{
     padding: 30px 0;
@@ -42,10 +31,6 @@
     font-size: 16px;
 }
 /*** section1 start ***/
-.page1_sec{
-    padding-bottom: 20px;
-    box-sizing: border-box;
-}
 article{
     width: calc(100% + 20px);
     padding: 0 10px;
@@ -320,10 +305,6 @@ figure{
 
 
 @media only screen and (max-width: 1440px) {
-.sec1 {
-    height: 0;
-    padding-bottom: 50%;
-}
 .w1440 {
     width: 100%;
     margin: auto;
