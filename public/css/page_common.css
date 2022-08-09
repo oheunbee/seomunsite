@@ -102,6 +102,10 @@ header {
     box-sizing: border-box;
     text-align: center;
 }
+.outnav {
+    display: flex;
+    justify-content: space-around;
+}
 .outnav>li:hover .innav{
     display: block;
 }
